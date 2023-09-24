@@ -3,8 +3,8 @@
 echo "pattern:"
 read -e pattern
 
-echo "files:"
-read -e files
+echo "files/dir:"
+read -er files
 
-cmd="grep -n -l -i $pattern $files 2"
+cmd="grep -nr $pattern $files"
 eval $cmd
